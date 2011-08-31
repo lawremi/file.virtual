@@ -1,0 +1,19 @@
+Package: file.virtual
+Type: Package
+Title: VFS API for R
+Version: 0.1
+Author: Michael Lawrence
+Maintainer: Michael Lawrence <michafla@gene.com>
+Description: Provides a Virtual File System API for R. An abstract
+             FileSystem maps a URI to a File object. By default, this
+             is based on the URI scheme. Each File type may be
+             implemented to support all existing file manipulation
+             functions in R. A file parsing framework, based on the
+             File abstraction, supports automatic format recognition,
+             and can access data from any File, whether local, remote
+             or virtual.
+Depends: methods
+Imports: utils
+License: Artistic
+Collate: URIScheme-class.R File-class.R FileSystem-class.R FileFormat-class.R
+         FileParser-class.R

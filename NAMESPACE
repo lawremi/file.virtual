@@ -1,0 +1,32 @@
+## IMPORTS
+importFrom(utils, file.edit)
+
+
+## EXPORTS
+
+## files
+exportClasses(File)
+export(File)
+
+## wrappers for R file API
+exportMethods(basename, dirname, normalizePath, list.files, list.dirs,
+              file.create, dir.create, file.exists, file.remove, unlink,
+              file.rename, file.append, file.copy, file.symlink, file.access,
+              file.info, Sys.readlink, file.show, file.edit)
+
+## file formats
+exportClasses(FileFormat)
+exportMethods(hasFormat, defaultResultClass)
+export(supportedFileFormats)
+
+## file parsing
+exportClasses(FileParser)
+exportMethods(parserGenerator)
+
+## file systems
+exportClasses(FileSystem, URISchemeFileSystem)
+exportMethods(fileGenerator)
+export(DefaultFileSystem, supportedFileSystems)
+
+## uri schemes
+exportClasses(URIScheme, FileScheme, HTTPScheme, FTPScheme, RSchemes)
