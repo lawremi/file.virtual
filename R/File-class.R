@@ -86,8 +86,11 @@ setRefClass("File",
               symlink = function(to) {
                 notImplemented("symlink")
               },
-              parse = function(resultClass = defaultResultClass(format), ...) {
-                FileParser(format, resultClass)$parse(.self, ...)
+              import = function(resultClass = defaultResultClass(format), ...) {
+                FileImporter(format, resultClass)$import(.self, ...)
+              },
+              export = function(object, ...) {
+                FileExporter(format)$export(object, .self, ...)
               }
               )
             )
